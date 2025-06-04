@@ -4,7 +4,7 @@ using namespace std;
 void main()
 {
 	setlocale(LC_ALL, "");
-	int SIZE = 5;
+	const int SIZE = 5;
 	int arr[SIZE];
 
 }
