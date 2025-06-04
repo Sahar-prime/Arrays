@@ -1,6 +1,13 @@
 #include <iostream>
 using namespace std;
 
+//#define TASK_1
+//#define TASK_2
+
+//#define MIN_AND_MAX
+//#define MIN_AND_MAX_2
+
+#ifdef TASK_1
 void main()
 {
 	setlocale(LC_ALL, "");
@@ -10,10 +17,14 @@ void main()
 	//cout << arr[2] << endl; //обращение к элементу массива на ч
 	
 	//Ввод элементов массива с клавиатуры
-	cout << "Введите элементы массива: ";
+	//cout << "Введите элементы массива: ";
+	int minRand, maxRand;
+	cout << "Введите минимальное случайное число: "; cin >> minRand;
+	cout << "Введите максимальное случайное число: "; cin >> maxRand;
 	for (int i = 0; i < SIZE; i++) 
 	{
-		cin >> arr[i];
+		//cin >> arr[i];
+		arr[i] = rand() % (maxRand - minRand) + minRand;
 	}
 
 	//Вывод массива на экран
@@ -40,6 +51,7 @@ void main()
 	//найти Средне-арифметическое элементов массива
 	cout << "Средне-арифметическое элементов массива: " << (double)sum / SIZE << endl;
 
+#ifdef MIN_AND_MAX
 	// Найти минимальное значение в массиве
 	int min = arr[0];
 	for (int i = 1; i < SIZE; i++)
@@ -61,7 +73,47 @@ void main()
 		}
 	}
 	cout << "Максимальное значение в массиве: " << max << endl;
+#endif
+
+#ifdef MIN_AND_MAX_2
+	int min, max;
+	min = max = arr[0];
+	for (int i = 0; i < SIZE; i++)
+	{
+		if (arr[i] < min)
+		{
+			min = arr[i];
+		}
+
+		if (arr[i] > max)
+		{
+			max = arr[i];
+		}
+	}
+	cout << "Минимальное значение в массиве: " << min << endl;
+	cout << "Максимальное значение в массиве: " << max << endl;
+#endif
 }
+#endif //TASK_1
+
+#ifdef TASK_2
+int main() 
+{
+	setlocale(LC_ALL, "");
+	char binaryStr[65]; // Достаточно для хранения 64-битного двоичного числа
+	cout << "Введите двоичное число: ";
+	cin >> binaryStr;
+
+	unsigned long decimal = 0;
+	for (int i = 0; binaryStr[i] != '\0'; ++i) {
+		decimal = decimal * 2 + (binaryStr[i] - '0');
+	}
+
+	cout << "Шестнадцатеричное представление: " << hex << decimal << endl;
+
+	return 0;
+}
+#endif //TASK_2
 
 /*
 Массивы(Array) - набор переменный одного типа в непрерывной области памяти.
@@ -91,4 +143,7 @@ SIZE - кол-во элементов массива.
 
 Инициализация массива.
 Для инициализации массива необходимо перечислить значение его элементов фигурных скобок через запятую при объявлении массивов.
+Для инерации случайных чисел используется
+Функция rand возращает псевдослучайное число в диапозоне от 0 до 32 767 (RAND_MAX)
+Для того чтобы ограничит генерация случайных чисео снизу используется +
 */
