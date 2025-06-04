@@ -29,6 +29,13 @@ void main()
 		cout << arr[i] << "\t";
 	}
 	cout << endl;
+	
+	int sum = 0;
+	for (int i = 0; i < SIZE; i++) 
+	{
+		sum += arr[i];
+	}
+	cout << "Сумма элементов массива: " << sum << endl;
 }
 /*
 Массивы(Array) - набор переменный одного типа в непрерывной области памяти.
