@@ -1,11 +1,11 @@
 #include <iostream>
 using namespace std;
 
-//#define TASK_1
+#define TASK_1
 //#define TASK_2
 
 //#define MIN_AND_MAX
-//#define MIN_AND_MAX_2
+#define MIN_AND_MAX_2
 
 #ifdef TASK_1
 void main()
@@ -93,6 +93,9 @@ void main()
 	cout << "ћинимальное значение в массиве: " << min << endl;
 	cout << "ћаксимальное значение в массиве: " << max << endl;
 #endif
+
+	//сортировка массива:
+
 }
 #endif //TASK_1
 
