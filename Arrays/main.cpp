@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-#define TASK_1
+//#define TASK_1
 //#define TASK_2
 
 //#define MIN_AND_MAX
@@ -12,23 +12,23 @@ void main()
 {
 	setlocale(LC_ALL, "");
 	const int SIZE = 5;
-	int arr[SIZE] = {3, 5, 8};
+	int arr[SIZE] = { 3, 5, 8 };
 	//arr[2] = 1024; //обращение к элементу массива на запись
 	//cout << arr[2] << endl; //обращение к элементу массива на ч
-	
+
 	//Ввод элементов массива с клавиатуры
 	//cout << "Введите элементы массива: ";
 	int minRand, maxRand;
 	cout << "Введите минимальное случайное число: "; cin >> minRand;
 	cout << "Введите максимальное случайное число: "; cin >> maxRand;
-	for (int i = 0; i < SIZE; i++) 
+	for (int i = 0; i < SIZE; i++)
 	{
 		//cin >> arr[i];
 		arr[i] = rand() % (maxRand - minRand) + minRand;
 	}
 
 	//Вывод массива на экран
-	for (int i = 0; i < SIZE; i++) 
+	for (int i = 0; i < SIZE; i++)
 	{
 		cout << arr[i] << "\t";
 	}
@@ -42,7 +42,7 @@ void main()
 	cout << endl;
 	
 	int sum = 0;
-	for (int i = 0; i < SIZE; i++) 
+	for (int i = 0; i < SIZE; i++)
 	{
 		sum += arr[i];
 	}
@@ -51,7 +51,7 @@ void main()
 	//найти Средне-арифметическое элементов массива
 	cout << "Средне-арифметическое элементов массива: " << (double)sum / SIZE << endl;
 
-//я это делал самостоятельно
+	//я это делал самостоятельно
 #ifdef MIN_AND_MAX
 	// Найти минимальное значение в массиве
 	int min = arr[0];
@@ -76,7 +76,7 @@ void main()
 	cout << "Максимальное значение в массиве: " << max << endl;
 #endif
 
-//это уже с учителем
+	//это уже с учителем
 #ifdef MIN_AND_MAX_2
 	int min, max;
 	min = max = arr[0];
@@ -95,9 +95,6 @@ void main()
 	cout << "Минимальное значение в массиве: " << min << endl;
 	cout << "Максимальное значение в массиве: " << max << endl;
 #endif
-
-	//сортировка массива:
-
 }
 #endif //TASK_1
 
@@ -116,8 +113,6 @@ int main()
 	}
 
 	cout << "Шестнадцатеричное представление: " << hex << decimal << endl;
-
-	return 0;
 }
 #endif //TASK_2
 
