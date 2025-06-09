@@ -3,7 +3,7 @@
 #include <ctime>   // Для функции time()
 using namespace std;
 
-#define RANDOM_NUMB
+//#define RANDOM_NUMB
 
 #ifdef RANDOM_NUMB
 int main()
