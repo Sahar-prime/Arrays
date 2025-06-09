@@ -4,32 +4,36 @@ using namespace std;
 //#define UROK
 
 #ifdef UROK
-int main() 
+int main()
 {
     setlocale(LC_ALL, "");
     // Инициализация массива
-    int arr[] = { 0, 1, 2, 2, 0, 5, 0, 7, 2, 2 };
+    int arr[] = { 110, 11, 22, 335, 110, 335, 0, 77, 22, 0, 110 };
     int size = sizeof(arr) / sizeof(arr[0]);
 
-    // Массив для подсчета количества повторений
-    int count[10] = { 0 }; // Предполагаем, что числа в массиве от 0 до 9
+    // Предполагаем, что максимальное значение в массиве не превышает 335
+    int count[336] = { 0 }; // Массив для подсчета количества повторений
 
     // Подсчет количества повторений каждого элемента
-    for (int i = 0; i < size; ++i) {
+    for (int i = 0; i < size; ++i) 
+    {
         count[arr[i]]++;
     }
 
     // Поиск и вывод повторяющихся элементов
     bool hasDuplicates = false;
-    for (int i = 0; i < 10; ++i) {
+    for (int i = 0; i <= 335; ++i) 
+    {
         if (count[i] > 1) {
-            cout << "Число " << i << " повторяется " << count[i] << " раз(а)." << endl;
+            cout << "Число " << i << " встречается " << count[i] << " раз(а)." << endl;
             hasDuplicates = true;
         }
     }
 
-    if (!hasDuplicates) {
+    if (!hasDuplicates) 
+    {
         cout << "Повторяющихся элементов нет." << endl;
     }
+
 }
 #endif //UROK
