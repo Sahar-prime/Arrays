@@ -18,5 +18,8 @@
     <ClCompile Include="Shifts.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="UROK.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
