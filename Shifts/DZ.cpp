@@ -1,9 +1,18 @@
 ﻿#include <iostream>
 using namespace std;
 
-//#define DZ
+//#define DZ_1
+//#define DZ_2
 
-#ifdef DZ
+#ifdef DZ_1
+int main() 
+{
+    int number = 44; // Пример числа
+    cout << hex << number;
+}
+#endif //DZ_1
+
+#ifdef DZ_2
 int main()
 {
     setlocale(LC_ALL, "");
@@ -36,4 +45,4 @@ int main()
     }
 
 }
-#endif //UROK
+#endif //DZ_2
