@@ -47,6 +47,6 @@ int main()
     cin >> decimalNumber;
 
     // Переводим десятичное число в шестнадцатеричное
-    cout << "Шестнадцатеричное представление: " << hex << decimalNumber << std::endl;
+    cout << "Шестнадцатеричное представление: " << hex << decimalNumber << endl;
 }
 #endif //TASK_2
