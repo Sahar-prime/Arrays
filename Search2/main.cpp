@@ -1,9 +1,9 @@
 #include <iostream>
 using namespace std;
 
-//#define SEARCH2
+//#define TASK_5
 
-#ifdef SEARCH2
+#ifdef TASK_5
 void findDuplicates(const int array[][5], int rows)
 {
     int count[16] = { 0 };
@@ -39,4 +39,4 @@ int main()
 
     findDuplicates(array, rows);
 }
-#endif //SEARCH2
+#endif //TASK_5
